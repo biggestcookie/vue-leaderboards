@@ -1,14 +1,20 @@
 import type { RouteRecordRaw } from "vue-router";
 import { createMemoryHistory, createRouter } from "vue-router";
-import Home from "../pages/home.page.vue";
+import GamePage from "../pages/game/game.page.vue";
+import HomePage from "../pages/home.page.vue";
 
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: HomePage,
   },
-  { path: "/:pathMatch(.*)*", redirect: "/home" },
+  {
+    path: "/game",
+    name: "Game",
+    component: GamePage,
+  },
+  { path: "/:pathMatch(.*)*", redirect: "/game" },
 ];
 
 const router = createRouter({

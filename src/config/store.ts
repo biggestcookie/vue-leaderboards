@@ -1,3 +1,10 @@
+import { useStorage } from "@vueuse/core";
 import { defineStore } from "pinia";
 
-export const useStore = defineStore("store", {});
+type Result = [name: string, elapsedTime: number];
+
+export const useStore = defineStore("store", {
+  state: () => ({
+    results: useStorage("results", [] as Result[]),
+  }),
+});
