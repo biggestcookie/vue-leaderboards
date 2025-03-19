@@ -39,7 +39,7 @@ function randomizeCoordinates(): { x: number; y: number } {
   <button
     @click="onButtonClick"
     class="button"
-    :style="{ top: coordinates.x + 'px', left: coordinates.y + 'px' }"
+    :style="{ left: coordinates.x + 'px', top: coordinates.y + 'px' }"
   >
     Click me!
   </button>
